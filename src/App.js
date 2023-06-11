@@ -8,18 +8,28 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
+import Login from "./Login";
 
 function App() {
   return (
     //BEM Convention
     <Router>
       <div className="app">
-        <Header />
         <Routes>
+          <Route
+            path="/login"
+            element={
+              <>
+                <Login />
+              </>
+            }
+          />
           <Route
             path="/checkout"
             element={
               <>
+                <Header />
+
                 <Checkout />
               </>
             }
@@ -28,6 +38,8 @@ function App() {
             path="/"
             element={
               <>
+                <Header />
+
                 <Home />
               </>
             }

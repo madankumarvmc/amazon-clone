@@ -9,15 +9,14 @@ function Home() {
         <img
           className="home__image"
           alt="op"
-          src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/Wireless/ssserene/OPmarble/D66357764_WLD_OnePlus_Salami_NewLaunch_DesktopTallHero_3000x1200._CB588027582_.jpg"
-          data-a-hires="https://images-eu.ssl-images-amazon.com/images/G/31/img21/Wireless/ssserene/OPmarble/D66357764_WLD_OnePlus_Salami_NewLaunch_DesktopTallHero_3000x1200._CB588027582_.jpg"
+          src="https://www.jdandj.com/uploads/8/0/0/8/80083458/book-cover-designers_9_orig.jpg"
         />
         <div className="home__row">
           <Product
             id="1"
             title="The Age of Empire"
             price={149}
-            image='https://m.media-amazon.com/images/I/61dlLf-4WIL._AC_SY200_.jpg" class="product-image" height="200px" data-a-hires="https://m.media-amazon.com/images/I/61dlLf-4WIL._AC_SY400_.jpg'
+            image="https://m.media-amazon.com/images/I/91dxwbNiqsL._AC_SY200_.jpg"
             rating={4}
           />
           <Product
@@ -37,7 +36,7 @@ function Home() {
           <Product
             id="4"
             title="Democrats And Dissenters"
-            price={299}
+            rice={299}
             image="https://m.media-amazon.com/images/I/71+9IsbHRGL._AC_SY200_.jpg"
             rating={4}
           />
