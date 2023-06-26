@@ -1,38 +1,38 @@
 import React, { useState } from "react";
-import "./Login.css";
+import "./Signup.css";
 import { Link, useNavigate } from "react-router-dom";
 import { auth } from "./firebase";
 
-function Login() {
+function Signup() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const signIn = (e) => {
-    e.preventDefault();
-
-    auth
-      .signInWithEmailAndPassword(email, password)
-      .then((auth) => {
-        // history.push("/");
-        navigate("/");
-      })
-      .catch((error) => alert(error.message));
-  };
-
-  //   const register = (e) => {
+  //   const signIn = (e) => {
   //     e.preventDefault();
 
   //     auth
-  //       .createUserWithEmailAndPassword(email, password)
+  //       .signInWithEmailAndPassword(email, password)
   //       .then((auth) => {
-  //         // it successfully created a new user with email and password
-  //         if (auth) {
-  //           navigate("/");
-  //         }
+  //         // history.push("/");
+  //         navigate("/");
   //       })
   //       .catch((error) => alert(error.message));
   //   };
+
+  const register = (e) => {
+    e.preventDefault();
+
+    auth
+      .createUserWithEmailAndPassword(email, password)
+      .then((auth) => {
+        // it successfully created a new user with email and password
+        if (auth) {
+          navigate("/");
+        }
+      })
+      .catch((error) => alert(error.message));
+  };
   return (
     <div className="login">
       <Link to="/">
@@ -45,7 +45,7 @@ function Login() {
 
       <div className="login__container">
         <div className="login__items">
-          <h2>Sign-In</h2>
+          <h2>Sign-Up</h2>
           <form className="logInInput__form">
             <h5>E-mail</h5>
             <input
@@ -61,9 +61,7 @@ function Login() {
               onChange={(e) => setPassword(e.target.value)}
             ></input>
 
-            <button type="submit" onClick={signIn}>
-              Sign In
-            </button>
+            <button onClick={register}>SignUp</button>
           </form>
           <p>
             By continuing, you agree to Amazon's Clone Conditions of Use and
@@ -71,18 +69,8 @@ function Login() {
           </p>
         </div>
       </div>
-
-      <div className="divider__break">
-        <h6>New to Amazon?</h6>
-      </div>
-
-      {/* <div className="signup__container" onClick={register}> */}
-      <Link to="/signup">
-        <button className="signup__button">Create Your Amazon Account</button>
-      </Link>
-      {/* </div> */}
     </div>
   );
 }
 
-export default Login;
+export default Signup;

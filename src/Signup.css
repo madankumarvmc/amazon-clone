@@ -59,19 +59,3 @@
   border-color: #a88734 #9c7e31 #846a29;
   color: #111;
 }
-
-.divider__break {
-  margin-top: 20px;
-  margin-bottom: 15px;
-}
-
-.signup__button {
-  background: #f0c14b;
-  border-radius: 5px;
-  width: 350px;
-  height: 30px;
-  border: 1px solid;
-  margin-bottom: 0px;
-  border-color: #a88734 #9c7e31 #846a29;
-  color: #111;
-}
